@@ -10,8 +10,19 @@ library(viridis)
 library(scales)
 library(plotly)
 library(data.table)
+library(RCurl)
 
-spotify_data <- read.csv("C:/Users/Diogo/Desktop/Data Visualization/Proj4/Assignment4/data.csv", sep="#")
+
+ 
+ temp <- tempfile()
+ url <- "https://github.com/DiogoSpencer/DataVisualization4/raw/main/data.zip"
+ download.file(url, temp)
+ spotify_data <- read.csv(unzip(temp, files =  "data.csv"), sep="#")
+
+
+
+
+#spotify_data <- read.csv("C:/Users/Diogo/Desktop/Assignemnt4 Final/Assignment4/data.csv", sep="#")
 #Aux Fucntions
 
 yearSth <- function(yearOfSth){

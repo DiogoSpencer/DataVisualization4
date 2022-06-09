@@ -20,7 +20,7 @@ dashboardPage(
     tabItems(
       tabItem("overview",
               h2("Overview"),
-              p("Some introduction needed to introduce the theme and the data set analysed in here"),
+              p("Here you can check the most popular song and artist in the spotify Top 200 (2017-2021) database!"),
               fluidRow(#BOX2
                 box(h4('Most popular Song'),width = 6,status = "success",
                     valueBoxOutput("streams",width = 12),
